@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín de Vacantes</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+    </script> -->
+</head>
+
+<body>
+    <div class="container">
+        <!---------------------------------- Inputs -------------------------------->
+        <p style="color:#f2f2f2;
+                	font-size: 21pt;
+                	font-weight: 700;">Por Área <span style="color: #f26524;">/ Externo</span></p>
+        <div class="zona-input">
+            <div class="secc-amu">
+                <div class="secc-mes">
+                    <p class="input-usuario">Mes</p>
+                    <select name="input-mes" id="input-mes">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="descargar-ext">
+                    <p class="dom-capt"><a
+                            href="https://chrome.google.com/webstore/detail/dom-capture/ifldimnhajpgognpcoomiokinilgjgbl/related"
+                            target="_blank">⚠️Descarga
+                            la extensión DOM Capture</a></p>
+                    <button onclick="copiarString()" id="generar-flyer">
+                        Copiar String para DOM Capture
+                    </button>
+                </div>
+            </div>
+            <div class="secc-lista">
+                <p class="input-usuario">Lista de vacantes</p>
+                <textarea id="input-lista" placeholder="Escribe o pega aquí la lista de vacantes."
+                    oninput="convertirTexto()"></textarea><br><br>
+                <div class="botones-font">
+                    <button class="btn-font" onclick="disminuirTamano()">-A</button>
+                    <button class="btn-font" onclick="aumentarTamano()">+A</button>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------- AREA BOLETIN ---------------------------->
+        <div class="area-boletin" id="screenshot">
+
+
+            <div class="encabezado">
+                <div class="seccion-logo">
+                    <img src="./media/naps-logo-completo.png" alt="logo-nc" class="logo">
+                </div>
+                <hr class="linea">
+                <div class="seccion-titulo">
+                    <p class="openpositions">Open Positions <span id="thin">for a</span></p>
+                    <p class="semiconductor">Semiconductor R&D Center</p>
+                </div>
+                <div class="seccion-infoadicional">
+                    <div class="seccion-ubicacion">
+                        <p class="ubicacion">📍Tijuana</p>
+                    </div>
+                    <div class="seccion-mes">
+                        <p class="mes">📆<span id="mes"></span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="listado">
+                <ul id="lista"></ul>
+            </div>
+            <p class="nota"><span id="ast"></span></strong>Avanced English required in all positions.</p>
+            <div class="footer">
+                <p class="text-footer">For more info and application, contact us.</p>
+                <p class="text-footer2"><span id="reclutador">Luis López | Talent Acquisition Specialist</span> <br>
+                    <span id="correo">l.lopez@napsmexico.com</span>.
+                </p>
+                </p>
+
+            </div>
+            <div class="fondo-2-footer"></div>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="./scripts.js"></script>
+    <!-- <script src="./html2canvas.js"></script> -->
+</body>
+
+</html>
